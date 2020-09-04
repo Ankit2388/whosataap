@@ -34,7 +34,7 @@ export const ConfirmButton = ( { onPress, style = {} } ) => {
  * @returns {JSX.Element}
  * @constructor
  */
-export const RadiusButton = ( { onPress, ...otherProps } ) => (
+export const RadiusButton = ({ onPress, ...otherProps }) => (
     <CustomButton
         style={styles.radiusButton}
         onPress={onPress}
@@ -42,7 +42,21 @@ export const RadiusButton = ( { onPress, ...otherProps } ) => (
     />
 )
 
-export const BackButton = ( { onPress } ) => (
+export const LargeBtn = ( props ) => {
+    // <CustomButton
+    //     style={styles.largeBtn}
+    //     onPress={onPress}
+    //     {...otherProps}
+    // />
+    const {btnHandler, title} = props
+    return (
+    <TouchableOpacity onPress={btnHandler} style={[styles.largeBtn]}>
+        <Text style={[styles.text]}>{title}</Text>
+    </TouchableOpacity>
+    )
+}
+
+export const BackButton = (   { onPress, ...otherProps }  ) => (
     <CustomButton
         style={styles.backBtnStyle}
         textStyle={{
@@ -68,6 +82,20 @@ const styles = StyleSheet.create({
 
     backBtnStyle: {
         backgroundColor: "transparent",
+    },
+
+    largeBtn : {
+        width : '100%',
+        height: 50,
+        borderRadius: 25,
+        elevation: 5,
+        justifyContent: "center",
+        alignItems: "center",        
+        backgroundColor: Colors.buttonColor,
+        shadowColor: "#000000",
+        shadowOpacity: 0.4,
+        shadowOffset: { height: 4, width: 0 },
+        shadowRadius: 5,
     },
 
     button: {

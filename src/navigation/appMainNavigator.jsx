@@ -18,6 +18,9 @@ import ProviderCheckinAt from '../pages/ProviderCheckinAt';
 import ProviderScheduleSuccess from '../pages/ProviderScheduleSuccess';
 import ProviderSuccess from '../pages/ProviderSuccess';
 import ProScreen from '../pages/ProScreen/ProScreen';
+import UserProfile from "../pages/Profile/UserProfile";
+import Follow from "../pages/FollowProvider/Follow";
+import SubFollow from "../pages/SubFollow/SubFollow";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();

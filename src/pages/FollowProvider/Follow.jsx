@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import { View, StyleSheet, Text, TextInput, Button } from "react-native";
 import { CustomTitle, SecondTitle } from "../../components/CommonText";
 import { CommonButton } from "../../components/Button";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from '@react-navigation/native';
 
 const Follow = () => {
+  const navigation = useNavigation();
   return (
     <View>
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
+      <View style={{ justifyContent: "center", alignItems: "center", marginTop: 23, }}>
         <CustomTitle name={"Follow Someone"} style={styles.follow} />
       </View>
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
+      <View style={{ justifyContent: "center", alignItems: "center", marginTop: 46, }}>
         <SecondTitle name="Enter Provider Code : " style={styles.enterCode} />
       </View>
       <View
@@ -24,19 +27,25 @@ const Follow = () => {
           }}
         />
       </View>
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
-        <CommonButton btnName={"Go"} style={styles.btn} />
-      </View>
+      <TouchableOpacity
+        style={{ justifyContent: "center", alignItems: "center" }}
+      >
+        <CommonButton
+          btnName={"Go"}
+          style={styles.btn}
+          onPress={() => navigation.navigate("SubFollowConfirm")}
+        />
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   follow: {
-    marginTop: 23,
+    fontSize: 20
   },
   enterCode: {
-    marginTop: 46,
+    fontSize: 14,
     width: "80%",
   },
   btn: {

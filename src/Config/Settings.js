@@ -1,0 +1,7 @@
+const {
+    OAUTH_CLIENT_ID: CLIENT_ID = 1,
+    OAUTH_CLIENT_SECRET: CLIENT_SECRET = 'vJSVNQ53EuVjuv1eiAuB8Rd8pTIZ4BdIyUig6eqZ',
+} = process.env || {};
+
+export const OAUTH_CLIENT_ID = CLIENT_ID;
+export const OAUTH_CLIENT_SECRET = CLIENT_SECRET;

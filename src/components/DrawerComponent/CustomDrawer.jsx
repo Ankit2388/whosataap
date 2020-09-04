@@ -65,7 +65,7 @@ function CustomDrawerContent( { logout, progress, navigation, ...rest } ) {
                         />
                         <DrawerItem
                             label={"Show Code"}
-                            labelStyle={{ letterSpacing: 1, fontSize: 16 }}
+                            labelStyle={{ letterSpacing: 1, fontSize: 16 }} 
                             onPress={notFunctional}
                         />
                         <DrawerItem

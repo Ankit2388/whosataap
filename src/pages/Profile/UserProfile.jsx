@@ -21,8 +21,12 @@ const UserProfile = () => {
             "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
         }}
       />
-      <CustomTitle name={"Vidish Atulkumar Shah"} style={styles.design} />
-      <SecondTitle name={"All - Rounder"} style={styles.secondDesign} />
+      <View style={styles.design}>
+        <CustomTitle name={"Provider Name"} style={styles.mainText} />
+      </View>
+      <View style={styles.secondDesign}>
+        <SecondTitle name={"15-32-18-24"} style={styles.secondText} />
+      </View>
     </View>
   );
 };
@@ -31,8 +35,16 @@ const styles = StyleSheet.create({
   design: {
     marginTop: 41,
   },
+  mainText: {
+    fontSize: 20,
+    opacity: 1,
+  },
   secondDesign: {
     marginTop: 14,
+  },
+  secondText: {
+    fontSize: 14,
+    opacity: 1,
   },
 });
 

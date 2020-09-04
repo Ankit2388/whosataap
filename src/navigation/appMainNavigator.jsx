@@ -24,6 +24,7 @@ import SubFollow from "../pages/SubFollow/SubFollow";
 import ProviderPage from "../pages/ProviderPage/ProviderPage";
 import ProviderSeeSchedule from "../pages/ProviderSeeSchedule/ProviderSeeSchedule";
 import ProviderEditProfile from "../pages/ProviderEditProfile/ProviderEditProfile";
+import SubFollowConfirm from "../pages/FollowProvider/SubFollowConfirm";
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -222,6 +223,21 @@ function appMainStack({ navigation }) {
       <Stack.Screen
         name="ProviderScheduleSuccess"
         component={ProviderScheduleSuccess}
+        options={{
+          headerBackground,
+          headerLeft: () => headerLeft(navigation),
+          headerRight: () => renderTopHomeIcon(navigation),
+          headerTitle: "",
+          headerTintColor: "white",
+          headerTitleStyle: {
+            fontSize: 22,
+          },
+        }}
+      />
+
+      <Stack.Screen
+        name="SubFollowConfirm"
+        component={SubFollowConfirm}
         options={{
           headerBackground,
           headerLeft: () => headerLeft(navigation),

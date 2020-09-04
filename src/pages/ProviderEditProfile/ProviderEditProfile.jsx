@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView } from "react-native";
 import { Icon } from "native-base";
 import user from "../../assets/images/Ellipse.png";
 import uploadImg from '../../assets/images/uploadImg.png';
@@ -7,6 +7,7 @@ import uploadImg from '../../assets/images/uploadImg.png';
 const ProviderEditProfile = () => {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <ScrollView>
       <View style={{ flex: 1, justifyContent: "space-evenly" }}>
         <View style={styles.header}>
           <View>
@@ -80,6 +81,7 @@ const ProviderEditProfile = () => {
                 </View> */}
         </View>
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
